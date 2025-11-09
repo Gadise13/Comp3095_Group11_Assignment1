@@ -1,0 +1,65 @@
+version: '3.8'
+
+services:
+  # ---------- DATABASES ----------
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: wellnessdb
+    ports:
+      - "5433:5432"   # 👈 changed from 5432:5432
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+
+  # ---------- WELLNESS RESOURCE SERVICE ----------
+  wellness-service:
+    build: ./wellness-service
+    container_name: wellness-service
+    ports:
+      - "8082:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/wellnessdb
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: password
+    depends_on:
+      - postgres
+
+  # ---------- GOAL TRACKING SERVICE ----------
+  goal-tracking-service:
+    build: ./goal-tracking-service
+    container_name: goal-tracking-service
+    ports:
+      - "8081:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/wellnessdb
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: password
+      WELLNESS_SERVICE_URL: http://wellness-service:8080/api/resources
+    depends_on:
+      - postgres
+      - wellness-service
+
+  # ---------- EVENT SERVICE ----------
+  event-service:
+    build: ./event-service
+    container_name: event-service
+    ports:
+      - "8083:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/wellnessdb
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: password
+      WELLNESS_SERVICE_URL: http://wellness-service:8080/api/resources
+    depends_on:
+      - postgres
+      - wellness-service
+
+volumes:
+  postgres_data:

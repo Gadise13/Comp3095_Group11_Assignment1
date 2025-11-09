@@ -1,0 +1,8 @@
+/Users/tyson/Desktop/COMP3095/comp3095/assignment1/Student-Wellness/goal-tracking-service/src/main/java/com/example/goaltracking/GoalTrackingServiceApplication.java
+/Users/tyson/Desktop/COMP3095/comp3095/assignment1/Student-Wellness/goal-tracking-service/src/main/java/com/example/goaltracking/client/ResourceClient.java
+/Users/tyson/Desktop/COMP3095/comp3095/assignment1/Student-Wellness/goal-tracking-service/src/main/java/com/example/goaltracking/controller/GoalController.java
+/Users/tyson/Desktop/COMP3095/comp3095/assignment1/Student-Wellness/goal-tracking-service/src/main/java/com/example/goaltracking/dto/GoalWithResources.java
+/Users/tyson/Desktop/COMP3095/comp3095/assignment1/Student-Wellness/goal-tracking-service/src/main/java/com/example/goaltracking/dto/WellnessResource.java
+/Users/tyson/Desktop/COMP3095/comp3095/assignment1/Student-Wellness/goal-tracking-service/src/main/java/com/example/goaltracking/model/Goal.java
+/Users/tyson/Desktop/COMP3095/comp3095/assignment1/Student-Wellness/goal-tracking-service/src/main/java/com/example/goaltracking/repository/GoalRepository.java
+/Users/tyson/Desktop/COMP3095/comp3095/assignment1/Student-Wellness/goal-tracking-service/src/main/java/com/example/goaltracking/service/GoalService.java

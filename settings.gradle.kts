@@ -1,0 +1,8 @@
+
+rootProject.name = "student-wellness"
+
+include(
+    "wellness-service",
+    "goal-tracking-service",
+    "event-service"
+)

@@ -1,0 +1,8 @@
+/Users/tyson/Desktop/COMP3095/comp3095/assignment1/Student-Wellness/event-service/src/main/java/com/example/event_service/EventServiceApplication.java
+/Users/tyson/Desktop/COMP3095/comp3095/assignment1/Student-Wellness/event-service/src/main/java/com/example/event_service/client/ResourceClient.java
+/Users/tyson/Desktop/COMP3095/comp3095/assignment1/Student-Wellness/event-service/src/main/java/com/example/event_service/controller/EventController.java
+/Users/tyson/Desktop/COMP3095/comp3095/assignment1/Student-Wellness/event-service/src/main/java/com/example/event_service/dto/EventWithResources.java
+/Users/tyson/Desktop/COMP3095/comp3095/assignment1/Student-Wellness/event-service/src/main/java/com/example/event_service/dto/WellnessResource.java
+/Users/tyson/Desktop/COMP3095/comp3095/assignment1/Student-Wellness/event-service/src/main/java/com/example/event_service/model/Event.java
+/Users/tyson/Desktop/COMP3095/comp3095/assignment1/Student-Wellness/event-service/src/main/java/com/example/event_service/repository/EventRepository.java
+/Users/tyson/Desktop/COMP3095/comp3095/assignment1/Student-Wellness/event-service/src/main/java/com/example/event_service/service/EventService.java

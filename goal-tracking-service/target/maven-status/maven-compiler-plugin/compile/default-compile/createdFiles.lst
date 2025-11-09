@@ -1,0 +1,9 @@
+com/example/goaltracking/model/Goal.class
+com/example/goaltracking/dto/WellnessResource.class
+com/example/goaltracking/service/GoalService.class
+com/example/goaltracking/controller/GoalController.class
+com/example/goaltracking/repository/GoalRepository.class
+com/example/goaltracking/GoalTrackingServiceApplication.class
+com/example/goaltracking/client/ResourceClient.class
+com/example/goaltracking/dto/GoalWithResources.class
+com/example/goaltracking/client/ResourceClient$1.class
