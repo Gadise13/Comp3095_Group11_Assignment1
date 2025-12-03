@@ -1,0 +1,5 @@
+com/example/wellness/repository/ResourceRepository.class
+com/example/wellness/WellnessServiceApplication.class
+com/example/wellness/model/ResourceEntity.class
+com/example/wellness/controller/ResourceController.class
+com/example/wellness/service/ResourceService.class

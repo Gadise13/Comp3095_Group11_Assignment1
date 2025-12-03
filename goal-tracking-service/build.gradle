@@ -1,0 +1,38 @@
+plugins {
+	id 'org.springframework.boot'
+	id 'io.spring.dependency-management'
+	id 'java'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+    // Spring Boot dependencies
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.postgresql:postgresql'
+    implementation 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    // H2 for in-memory tests
+    implementation 'com.h2database:h2'
+
+    // Test dependencies
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // Use Testcontainers BOM to manage versions
+    testImplementation platform('org.testcontainers:testcontainers-bom:1.20.2')
+    testImplementation 'org.testcontainers:junit-jupiter'
+    testImplementation 'org.testcontainers:postgresql'
+    //testImplementation 'org.testcontainers:redis'
+}
+
+test {
+	useJUnitPlatform()
+}

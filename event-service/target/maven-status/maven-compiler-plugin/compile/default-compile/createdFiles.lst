@@ -1,0 +1,9 @@
+com/example/event_service/EventServiceApplication.class
+com/example/event_service/service/EventService.class
+com/example/event_service/client/ResourceClient.class
+com/example/event_service/model/Event.class
+com/example/event_service/dto/WellnessResource.class
+com/example/event_service/dto/EventWithResources.class
+com/example/event_service/controller/EventController.class
+com/example/event_service/repository/EventRepository.class
+com/example/event_service/client/ResourceClient$1.class
