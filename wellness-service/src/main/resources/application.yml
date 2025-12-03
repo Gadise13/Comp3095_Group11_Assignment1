@@ -1,0 +1,11 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    url: jdbc:postgresql://postgres:5432/wellness
+    username: postgres
+    password: postgres
+  redis:
+    host: redis
+    port: 6379
