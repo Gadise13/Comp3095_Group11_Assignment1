@@ -7,3 +7,38 @@ spring:
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+      # base URL to call wellness-service (use docker-compose service name in that environment)
+      wellness:
+        base-url: http://wellness-service:8081
+
+      springdoc:
+        api-docs:
+          path: /v3/api-docs
+        swagger-ui:
+          path: /swagger-ui.html
+
+      spring:
+        security:
+          oauth2:
+            resourceserver:
+              jwt:
+                issuer-uri: https://<your-keycloak-domain>/realms/<realm>
+
+      resilience4j:
+        circuitbreaker:
+          configs:
+            default:
+              slidingWindowSize: 10
+              failureRateThreshold: 50
+              waitDurationInOpenState: 20s
+              minimumNumberOfCalls: 5
+          instances:
+            wellnessService:
+              baseConfig: default
+
+      management:
+        endpoints:
+          web:
+            exposure:
+              include: health,info,metrics,prometheus

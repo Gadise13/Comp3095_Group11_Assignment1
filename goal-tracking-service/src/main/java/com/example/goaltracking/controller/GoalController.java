@@ -63,5 +63,16 @@ public class GoalController {
         service.delete(id);
         return ResponseEntity.noContent().build();
     }
+    private final WellnessClient wellnessClient;
+
+    public GoalController(WellnessClient wellnessClient) {
+        this.wellnessClient = wellnessClient;
+    }
+
+    @GetMapping("/api/goal/resource/{id}")
+    public ResourceDto getResource(@PathVariable String id) {
+        // this call uses @CircuitBreaker inside WellnessClient
+        return wellnessClient.getResourceById(id);
+    }
 }
 

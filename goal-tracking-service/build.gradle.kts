@@ -13,5 +13,6 @@ dependencies {
     implementation("org.springframework.kafka:spring-kafka")
     implementation("com.fasterxml.jackson.core:jackson-databind")
     implementation("org.springframework.boot:spring-boot-starter-data-mongodb")
+    implementation("org.springdoc:springdoc-openapi-starter-webflux-ui:2.1.0")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }

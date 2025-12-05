@@ -18,6 +18,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.postgresql:postgresql'
     implementation 'org.projectlombok:lombok'
+    implementation("org.springdoc:springdoc-openapi-starter-webflux-ui:2.1.0")
     annotationProcessor 'org.projectlombok:lombok'
 
     // H2 for in-memory tests

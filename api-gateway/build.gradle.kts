@@ -14,5 +14,7 @@ dependencies {
     implementation("org.springframework.cloud:spring-cloud-starter-gateway")
     implementation("org.springframework.boot:spring-boot-starter-oauth2-resource-server")
     implementation("org.springframework.boot:spring-boot-starter-security")
+    implementation("org.springdoc:springdoc-openapi-starter-webflux-ui:2.1.0")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+
 }
